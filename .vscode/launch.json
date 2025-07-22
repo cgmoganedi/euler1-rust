@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug euler1-rust",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": { "args": ["run", "--bin", "euler1-rust"], "filter": { "name": "euler1-rust" } },
+      "args": ["1000"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
