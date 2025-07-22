@@ -1,1 +1,16 @@
-/target
+
+### 📄 `.gitignore`
+
+```gitignore
+/target/
+/Cargo.lock
+**/*.rs.bk
+*.swp
+*.bak
+*.tmp
+*.log
+*.out
+*.exe
+.idea/
+.vscode/
+benches/**
