@@ -1,28 +1,21 @@
-fn sum_multiples(limit: usize) -> usize {
-    (1..limit)
-        .filter(|&n| n % 3 == 0 || n % 5 == 0)
-        .sum()
-}
+//! Euler Rust Runner
+//!
+//! Prints solutions to the first 5 Project Euler-style problems.
+
+mod problems;
+
+use problems::{
+    problem01::solve_01,
+    problem02::solve_02,
+    problem03::solve_03,
+    problem04::solve_04,
+    problem05::solve_05,
+};
 
 fn main() {
-    let limit = std::env::args()
-        .nth(1)
-        .and_then(|s| s.parse().ok())
-        .unwrap_or(1000);
-    println!("{}", sum_multiples(limit));
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_small() {
-        assert_eq!(sum_multiples(10), 23);
-    }
-
-    #[test]
-    fn test_zero() {
-        assert_eq!(sum_multiples(0), 0);
-    }
+    println!("Problem 01: {}", solve_01());
+    println!("Problem 02: {}", solve_02());
+    println!("Problem 03: {}", solve_03());
+    println!("Problem 04: {}", solve_04());
+    println!("Problem 05: {}", solve_05());
 }
